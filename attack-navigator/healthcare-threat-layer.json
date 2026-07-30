@@ -1,0 +1,55 @@
+{
+  "name": "Healthcare KEV Threat Assessment - 2026 H1",
+  "versions": {
+    "attack": "18",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "ATT&CK mappings for the three priority vulnerabilities in the fictional Northstar Regional Health assessment.",
+  "filters": {
+    "platforms": [
+      "Windows",
+      "Linux",
+      "Network Devices"
+    ]
+  },
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true
+  },
+  "techniques": [
+    {
+      "techniqueID": "T1190",
+      "score": 3,
+      "comment": "CVE-2026-0257 assessed with high confidence. CVE-2026-20131 conditional on internet-facing FMC management access.",
+      "enabled": true
+    },
+    {
+      "techniqueID": "T1210",
+      "score": 2,
+      "comment": "CVE-2023-21529 assessed for authenticated network exploitation. CVE-2026-20131 assessed for internally reachable FMC management access.",
+      "enabled": true
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffe766",
+      "#ff6666"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "legendItems": [
+    {
+      "label": "Assessed or conditional",
+      "color": "#ffe766"
+    },
+    {
+      "label": "Strongly supported",
+      "color": "#ff6666"
+    }
+  ]
+}
